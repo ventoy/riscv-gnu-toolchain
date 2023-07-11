@@ -15,11 +15,11 @@ jobs:
       matrix:
         os:     [ubuntu-22.04]
         mode:   [linux]
-        target: [rv32gc_zba_zbb_zbs-ilp32d]
+        target: [rv32gc-ilp32d]
         compiler: [gcc]
         exclude:
           - mode: musl
-            target: rv32gc_zba_zbb_zbs-ilp32d
+            target: rv32gc-ilp32d
           - mode: musl
             compiler: llvm
     steps:
