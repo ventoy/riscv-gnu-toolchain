@@ -13,13 +13,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os:     [ubuntu-20.04, ubuntu-22.04]
-        mode:   [newlib, linux, musl]
-        target: [rv32gc-ilp32d, rv64gc-lp64d]
-        compiler: [gcc, llvm]
+        os:     [ubuntu-22.04]
+        mode:   [newlib, linux]
+        target: [rv32imc_zba_zbb_zbs]
+        compiler: [gcc]
         exclude:
           - mode: musl
-            target: rv32gc-ilp32d
+            target: rv32imc_zba_zbb_zbs
           - mode: musl
             compiler: llvm
     steps:
