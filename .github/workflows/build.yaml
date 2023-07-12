@@ -14,12 +14,12 @@ jobs:
     strategy:
       matrix:
         os:     [ubuntu-22.04]
-        mode:   [linux]
-        target: [rv32imafd_zicsr_zifencei-ilp32d]
+        mode:   [newlib]
+        target: [rv32g_zicsr_zifencei-ilp32d]
         compiler: [gcc]
         exclude:
           - mode: musl
-            target: rv32imafd_zicsr_zifencei-ilp32d
+            target: rv32g_zicsr_zifencei-ilp32d
           - mode: musl
             compiler: llvm
     steps:
